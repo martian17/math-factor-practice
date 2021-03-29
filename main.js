@@ -174,9 +174,9 @@ var formatProblems = function(arr){
             p.question = a+"x²"+b+"x"+c;
         }
         if(p.pair[0] === p.pair[1]){
-            p.answer = "x = "+p.pair[0];
+            p.answer = "x = "+(-p.pair[0]);//invert the content of factors
         }else{
-            p.answer = "x = "+p.pair[0]+", "+p.pair[1];
+            p.answer = "x = "+(-p.pair[0])+", "+(-p.pair[1]);
         }
     }
     return arr;
@@ -191,7 +191,7 @@ var generateProblems = function(n){
     var questions = "";
     var answers = "";
     for(var i = 0; i < problems.length; i++){
-        questions += "Q"+(i+1)+": "+problems[i].question+"\n\n\n\n\n\n\n";
+        questions += "Q"+(i+1)+": "+problems[i].question+" = 0\n\n\n\n\n\n\n";
         answers += "A"+(i+1)+": "+problems[i].answer+"\n";
     }
     console.log(questions);
