@@ -1,1 +1,1 @@
-This is a default readme that is created by the htmlinit command
+This program automatically generates practice math problems and answers
